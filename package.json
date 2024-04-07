@@ -10,6 +10,7 @@
   "author": "Punam Deore",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "express": "^4.19.2"
   }
 }

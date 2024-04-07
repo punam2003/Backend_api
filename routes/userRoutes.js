@@ -1,15 +1,18 @@
 import express from 'express'
-import { homeController, signup, getUser,getGithubDetails  } from '../controllers/user.js';
+import { getGithubDetails, getCountryDetails } from '../controllers/user.js';
+
 
 const router = express.Router();
 
-router.get('/', homeController);
 
-router.get('/getuser/:userid', getUser);
 
-router.post('/signup', signup);
+// router.get('/getuser/:userid', getUser);
 
-router.get('/git/:username',getGithubDetails);
+// router.post('/signup', signup);
+
+router.get('/getdata/:username',getGithubDetails);
+
+router.get('/data/:countryname',getCountryDetails);
 
 
 export default router;

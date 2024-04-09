@@ -1,5 +1,5 @@
 import express from 'express'
-import { getGithubDetails, getCountryDetails } from '../controllers/user.js';
+import { getGithubDetails, getCountryDetails,getWeatherDetails } from '../controllers/user.js';
 
 
 const router = express.Router();
@@ -13,6 +13,8 @@ const router = express.Router();
 router.get('/getdata/:username',getGithubDetails);
 
 router.get('/data/:countryname',getCountryDetails);
+
+router.get('/viewdata/:cityname',getWeatherDetails);
 
 
 export default router;

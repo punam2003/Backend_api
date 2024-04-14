@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+        /* Center align the title */
+        h1 {
+            text-align: center;
+        }
+        
+        /* Center align the container */
+        .blog-container {
+            text-align: center; /* Center align the contents of the container */
+        }
+
+        /* Set maximum width for the images */
+        .blog img {
+            max-width: 500px;
+            height: auto;
+            display: block; /* Ensures the image is centered properly */
+            margin: 0 auto 20px; /* Center align the image and add space below */
+        }
+        .create-blog-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            text-decoration: none; /* Remove default underline */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+            margin-top: 20px;
+            font-size: 16px; /* Adjust font size */
+            font-weight: bold; /* Make text bold */
+        }
+
+        /* Hover effect for the button */
+        .create-blog-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+        
+    
+</head>
+<body>
+    <h1> WebBlog</h1>
+    <div class="blog-container">
+        <% blogs.forEach(blog => { %>
+            <div class="blog">
+                <h2><%= blog.title %></h2>
+                <img src="<%= blog.image %>" alt="<%= blog.title %>">
+                <p><strong>Author:</strong> <%= blog.author %></p>
+            </div>
+        <% }) %>
+    </div>
+    
+   
+        
+        <!-- Styled button -->
+        <button class="create-blog-button" onclick="window.location.href='/create-blog'">Create New Blog</button>
+        
+    </body>
+
+</body>
+</html>
